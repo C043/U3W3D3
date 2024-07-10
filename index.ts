@@ -39,3 +39,22 @@ const mario: Person & Developer = {
 };
 
 console.log(mario);
+
+interface PersonInterface {
+  name: string;
+  surname: string;
+  age: stringOrNumber;
+}
+
+interface DeveloperInterface extends PersonInterface {
+  languages: string[];
+  favoriteLanguage?: string;
+}
+
+const roberto: DeveloperInterface = {
+  name: "Roberto",
+  surname: "Patrone",
+  age: 32,
+  languages: ["HTML", "TypeScript"],
+};
+console.log(roberto);

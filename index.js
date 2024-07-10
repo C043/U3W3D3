@@ -16,3 +16,10 @@ const mario = {
     languages: ["HTML", "CSS", "SASS", "JavaScript", "TypeScript"],
 };
 console.log(mario);
+const roberto = {
+    name: "Roberto",
+    surname: "Patrone",
+    age: 32,
+    languages: ["HTML", "TypeScript"],
+};
+console.log(roberto);
