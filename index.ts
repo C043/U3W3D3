@@ -8,15 +8,15 @@ whatever = false;
 
 //prova di commento
 
-let newFunc: (x: number, y: number) => string;
+type newFunc = (x: number, y: number) => string;
 
-const addition = (n1: number, n2: number): string => {
+const addition: newFunc = (n1: number, n2: number): string => {
   return (n1 + n2).toString();
 };
 
-newFunc = addition;
+/* newFunc = addition;*/
 
-console.log(newFunc(10, 20));
+console.log(addition(10, 20));
 
 type stringOrNumber = string | number;
 
@@ -46,15 +46,26 @@ interface PersonInterface {
   age: stringOrNumber;
 }
 
-interface DeveloperInterface extends PersonInterface {
-  languages: string[];
-  favoriteLanguage?: string;
+let str: string;
+interface DeveloperInterface<type> extends PersonInterface {
+  languages: type[];
+  favoriteLanguage?: type;
 }
 
-const roberto: DeveloperInterface = {
+const roberto: DeveloperInterface<typeof str> = {
   name: "Roberto",
   surname: "Patrone",
   age: 32,
   languages: ["HTML", "TypeScript"],
+  favoriteLanguage: "CSS",
 };
+
 console.log(roberto);
+
+type custom<type> = {
+  name: type;
+};
+
+const nome: custom<string> = {
+  name: "Custom",
+};
