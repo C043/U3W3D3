@@ -17,3 +17,25 @@ const addition = (n1: number, n2: number): string => {
 newFunc = addition;
 
 console.log(newFunc(10, 20));
+
+type stringOrNumber = string | number;
+
+type Person = {
+  name: string;
+  surname: string;
+  age: stringOrNumber;
+};
+
+type Developer = {
+  languages: string[];
+  favoriteLanguage?: string;
+};
+
+const mario: Person & Developer = {
+  name: "Mario",
+  surname: "Fragnito",
+  age: "25",
+  languages: ["HTML", "CSS", "SASS", "JavaScript", "TypeScript"],
+};
+
+console.log(mario);

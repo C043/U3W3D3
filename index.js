@@ -9,3 +9,10 @@ const addition = (n1, n2) => {
 };
 newFunc = addition;
 console.log(newFunc(10, 20));
+const mario = {
+    name: "Mario",
+    surname: "Fragnito",
+    age: "25",
+    languages: ["HTML", "CSS", "SASS", "JavaScript", "TypeScript"],
+};
+console.log(mario);
